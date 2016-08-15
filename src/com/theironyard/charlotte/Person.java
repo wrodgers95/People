@@ -1,6 +1,5 @@
 package com.theironyard.charlotte;
 
-
 class Person implements Comparable {
 
     Person (String firstName, String lastName, String country, String email, String ip, String id) {
@@ -72,13 +71,13 @@ class Person implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        Person p = (Person) o;
-        return lastName.compareTo(p.lastName);
+    public String toString() {
+        return String.format("%s, %s, %s,\n", firstName, lastName, country);
     }
 
     @Override
-    public String toString (){
-        return String.format("%s, %s", lastName, firstName);
+    public int compareTo(Object o) {
+        Person p = (Person) o;
+        return lastName.compareTo(p.lastName);
     }
 }
