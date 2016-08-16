@@ -2,7 +2,7 @@ package com.theironyard.charlotte;
 
 class Person implements Comparable {
 
-    Person (String firstName, String lastName, String country, String email, String ip, String id) {
+    Person (String id, String firstName, String lastName, String email, String country, String ip) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.country = country;
@@ -11,12 +11,12 @@ class Person implements Comparable {
         this.id = id;
     }
 
+    private String id;
     private String firstName;
     private String lastName;
     private String country;
     private String email;
     private String ip;
-    private String id;
 
     public Person() {
 
@@ -72,7 +72,7 @@ class Person implements Comparable {
 
     @Override
     public String toString() {
-        return String.format("%s, %s, %s,\n", firstName, lastName, country);
+        return String.format("%s %s", firstName, lastName);
     }
 
     @Override
